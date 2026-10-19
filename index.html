@@ -1,27 +1,46 @@
 <!DOCTYPE html>
+<!--
+  REVIEW NOTES (index.html)
+  - Structure: <header>, <main> and <footer> were placed between </head> and <body>, and <body> was nested inside <main>.
+    All content now sits inside <body>, which is required for valid HTML.
+  - Image path: the file is "Avatar.png" (capital A). GitHub Pages is case-sensitive, so "avatar.png" showed a broken image.
+  - Alt text was a file path ("student-site/images/AvatarMaker.png"). Screen readers read alt text aloud, so it should describe the image.
+  - Links: "about.html" changed to "About.html" to match the real file name. See the notes on renaming the file.
+  - The script.js include was removed from this page. It has no interactive content here, and the script only belongs on About Me.
+-->
 <html lang="en">
 <head>
-  <meta name="description" content="This page tells you a bit about me and shows you what i look like..">
   <meta charset="UTF-8">
-  <title>Constant Morvan  — Studio Profile</title>
+  <!-- REVISION: charset moved to the top of <head>. The browser should read the encoding before any text, so this is the standard order. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- REVISION: added the viewport tag. Without it, phones show the page zoomed out and the layout does not adapt. -->
+  <meta name="description" content="This page tells you a bit about me and shows you what I look like.">
+  <!-- REVISION: fixed capitalization of "I" and punctuation in the description. -->
+  <title>Constant Morvan — Studio Profile</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<header>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Me</a>
-  <a href="work.html">My Work</a>
-</header>
+<body>
 
-<main>
-  <body>
+  <header>
+    <nav>
+      <!-- REVISION: links were in a <header> with no <nav>. The stylesheet styles <nav>, so the blue navigation bar never appeared. -->
+      <a href="index.html">Home</a>
+      <a href="About.html">About Me</a>
+      <a href="work.html">My Work</a>
+    </nav>
+  </header>
+
+  <main>
     <h1>Constant Morvan</h1>
-    <img src="images/avatar.png" alt="student-site/images/AvatarMaker.png">
-    <p>Hi, im Constant Morvan, i go by he/him. </p>
-    <script src="js/script.js"></script>
-  </body>
-</main>
+    <img src="images/Avatar.png" alt="Photo of Constant Morvan">
+    <!-- REVISION: file name changed to match "Avatar.png" exactly (see notes above). Alt text now describes the image. -->
+    <p>Hi, I'm Constant Morvan. I go by he/him.</p>
+    <!-- REVISION: "im" changed to "I'm" and "i" changed to "I". Capital "I" is always used for the pronoun. -->
+  </main>
 
-<footer>
+  <footer>
     <p>&copy; 2026 Constant Morvan</p>
   </footer>
+
+</body>
 </html>

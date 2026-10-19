@@ -1,34 +1,53 @@
 <!DOCTYPE html>
+<!--
+  REVIEW NOTES (work.html)
+  - Same structural fixes as the other pages: <header> was outside <body>, and an <hr> was inside a <ul>.
+  - Title "My Work — Your Name" contained template text, so it was changed.
+  - The page had a <script> tag, but this page has no interactive content, so the tag was removed.
+  - "the cap app" was changed to "the cat app". This is an assumption based on the rest of the sentence and the topic of the page.
+    Please check with the student.
+-->
 <html lang="en">
 <head>
-  <meta name="description" content="This page shows you what i hope to achive.">
   <meta charset="UTF-8">
-  <title>My Work — Your Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- REVISION: viewport tag added (see index.html). -->
+  <meta name="description" content="This page shows you what I hope to achieve.">
+  <!-- REVISION: "achive" changed to "achieve". -->
+  <title>My Work — Constant Morvan</title>
+  <!-- REVISION: "Your Name" template text replaced with the student's name. -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<header>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Me</a>
-  <a href="work.html">My Work</a>
-</header>
+<body>
 
-<main>
-  <body>
+  <header>
+    <nav>
+      <!-- REVISION: wrapped in <nav> so the stylesheet applies (see index.html). -->
+      <a href="index.html">Home</a>
+      <a href="About.html">About Me</a>
+      <a href="work.html">My Work</a>
+    </nav>
+  </header>
+
+  <main>
     <h1>My Work</h1>
-    <p>Coming soon — here's what I'm hoping to build this year:</p>
+    <p>Coming soon. Here's what I'm hoping to build this year:</p>
+    <!-- REVISION: "Coming soon — here's what I'm hoping" tidied to match the rest of the page. -->
+
     <ul>
-      <li>My first project idea is to make a horror game with multiple leves about a chaacter in a world of monster abomination.</li>
-      <li>i want to make an app to help poeple find cat pictures faster like memes or just cute picture but also just an app where poeple can share there best cat pics.</li>
-      <li>Another idea is similar to the cap app but for reptiles where you can find pictures but you can also find links that are trused and poeple could post there journes to having a reptile.</li>
-
-      <hr>
-      
+      <li>My first project idea is to make a horror game with multiple levels about a character in a world of monster abominations.</li>
+      <!-- REVISION: "leves" to "levels", "chaacter" to "character", "abomination" to "abominations" (plural to match "a world of monster"). -->
+      <li>I want to make an app to help people find cat pictures faster, like memes or just cute pictures. I also want an app where people can share their best cat pics.</li>
+      <!-- REVISION: capitalized the sentence, corrected "poeple" to "people", "there" to "their", and split the long sentence in two. -->
+      <li>Another idea is similar to the cat app but for reptiles. Users could find pictures and also find links that are trusted, and people could post their journeys of having a reptile.</li>
+      <!-- REVISION: "cap app" changed to "cat app" (see the notes above). Also corrected "trused" to "trusted", "journes" to "journeys", "to having" to "of having" and the sentence structure. -->
     </ul>
-    <script src="js/script.js"></script>
-  </body>
-</main>
+    <!-- REVISION: the <hr> that was inside this <ul> was removed, because it is not valid there. -->
+  </main>
 
-<footer>
+  <footer>
     <p>&copy; 2026 Constant Morvan</p>
   </footer>
-</html> 
+
+</body>
+</html>

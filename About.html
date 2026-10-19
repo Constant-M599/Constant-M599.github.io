@@ -1,103 +1,110 @@
 <!DOCTYPE html>
+<!--
+  REVIEW NOTES (About.html)
+  - The file contained two extra, nested <!DOCTYPE html> and <html> blocks, plus a second <html> at the end.
+    A page can only have one of each. These were removed. The joke that was inside them is now a proper section.
+  - The joke used ids (#game-btn, #game) that the script did not know about. The script used different ids (#games-btn, #favourite-game),
+    so neither matched. Both now use the same ids: #joke-btn and #joke.
+  - Heading levels: each section was an <h1>. There should be one <h1> per page, with sections as <h2>.
+  - <hr> was placed inside <ul> elements. That is not valid HTML. Dividers were moved outside the lists.
+  - Lists: "Quick Facts" and "Questions About Me" used <br> tags to fake a list. They are now real <ul> lists, which screen readers
+    and CSS can handle properly.
+  - The page title and meta description contained template text ("Your Name", "alot").
+  - Spelling and grammar were corrected throughout, but the wording and personal details were kept as the student wrote them.
+-->
 <html lang="en">
 <head>
-  <meta name="description" content="This page will tell you alot about me!">
   <meta charset="UTF-8">
-  <title>About Me — Your Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- REVISION: viewport tag added (see the same note in index.html). -->
+  <meta name="description" content="This page tells you a lot about me!">
+  <!-- REVISION: "alot" changed to "a lot". -->
+  <title>About Me — Constant Morvan</title>
+  <!-- REVISION: the title was "About Me — Your Name", which is template text left in the page. -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<nav>
-<header>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="work.html">My Work</a>
-</header>
-</nav>
-
-<main>
-  <body>
-    <img src="images/photo2.png" alt="student-site/images/AvatarMaker.png">
-    <h1 id="bio-heading">About Me</h1>
-      
-      <hr>
-
-    <h1>My Story</h1>
-    <p>Im 14 and i really like cats, a thing i like about cats is their fur it is just so flufy most of the time. I have two siblings, my sister and my brother then there is my mom and my dad and my favorite... my gecko! his name is nuggs he is 5 to 6 months old and he loves his rock hidout.</p>
-
-        <hr>
-
-    <h1>A Few Things I'm Into</h1>
-    <ul>
-      <li>Video games because its fun and i love horror games specificly because i love the trille of beng scared.</li>
-      <li>Next is art its a fun hobbie and there is always more to learn.</li>
-      <li>Lastly i love to sleep to let my brain have a break.</li>
-      
-        <hr>
-
-    </ul>
-    <h1>Quick Facts</h1>
-    <p>
-      My favorite subject is woodwork because i love hands on work and i am a hands on learner.<br>
-      A skill I'm proud of is being bilingual because im originaly from france and i move here when i as 2 so i lerned a lot of english. <br>
-      My goal for this course is to hand in everything because last year i only handed in some stuff and i was not proud of my self so i want that to change.
-    </p>
-
-      <hr>
-
-  </body>
-  <h1>Questions About Me</h1>
-    <p>
-      Name: Constant Morvan.<br>
-      Birth Month: I was born in may and i am a taurus.<br>
-      My favorit subject is woodwork.<br>
-      My favorite Video game is resident evil because the storie line is awsome and i love the characters but most of all it is a horror game<br>
-      I use to play the trombone but i stop because i did not like it a lot but i did start choir and i am having a lot of fun.<br>
-      My favorite food has to be my moms smashed potates and her lasagna.<br>
-      If i could have any super power it would be able to control water because it woud be fun.<br>
-      If i could go anywhere in that world i would go to australia because it is simply just so beatiful.<br>
-      My favorite season is falls because i love the weather amd the holidays.<br>
-      Personaly i think i am more of a night owl.<br>
-      I love to spent my weekend one day at home and one days outside.<br>
-      A game i would recommend to every one is resident evil like i said before it is just the best horror game of all time.<br>
-    </p>
-
-      <hr>
-
-    <!DOCTYPE html>
-<html>
-  <!DOCTYPE html>
-<html>
-<head>
-    <title>My Website</title>
-</head>
-
 <body>
 
-    <h1>My joke</h1>
+  <header>
+    <nav>
+      <!-- REVISION: wrapped in <nav> so the stylesheet applies (see index.html). -->
+      <a href="index.html">Home</a>
+      <a href="About.html">About Me</a>
+      <a href="work.html">My Work</a>
+    </nav>
+  </header>
 
-    <button id="game-btn">Wanna hear a joke</button>
+  <main>
+    <img src="images/photo2.png" alt="Photo of Constant Morvan">
+    <!-- REVISION: the alt text was a file path. It now describes the image. Check that this description matches the photo. -->
 
-    <p id="game" style="display: none;">
-        There are two ways to write error-free programs; only the third one works.
+    <h1 id="bio-heading">About Me</h1>
+
+    <hr>
+
+    <h2>My Story</h2>
+    <p>
+      I'm 14 and I really like cats. One thing I like about cats is their fur. It is so fluffy most of the time.
+      I have two siblings, my sister and my brother. Then there is my mom and my dad, and my favorite... my gecko!
+      His name is Nuggs. He is 5 to 6 months old, and he loves his rock hideout.
     </p>
+    <!-- REVISION: capitalization, punctuation and spelling ("flufy" to "fluffy", "hidout" to "hideout", "Im" to "I'm", "his name is nuggs" to "His name is Nuggs"). -->
 
-    <script>
-        const gameBtn = document.querySelector("#game-btn");
-        const game = document.querySelector("#game");
+    <hr>
 
-        gameBtn.addEventListener("click", function () {
-            game.style.display = "block";
-        });
-    </script>
+    <h2>A Few Things I'm Into</h2>
+    <ul>
+      <li>Video games, because they are fun. I love horror games specifically because I love the thrill of being scared.</li>
+      <li>Art, because it is a fun hobby and there is always more to learn.</li>
+      <li>Sleep. I love to sleep to let my brain have a break.</li>
+    </ul>
+    <!-- REVISION: the <hr> that was inside this <ul> was moved out, because <hr> is not allowed inside a list. Spelling fixed ("specificly", "trille", "beng", "hobbie"). -->
 
-</body>
-</html>
+    <hr>
 
-  </body>
-</main>
+    <h2>Quick Facts</h2>
+    <ul>
+      <li>My favorite subject is woodwork because I love hands-on work and I am a hands-on learner.</li>
+      <li>A skill I'm proud of is being bilingual. I'm originally from France, and I moved here when I was 2, so I learned a lot of English.</li>
+      <li>My goal for this course is to hand in everything. Last year I only handed in some of my work and I was not proud of myself, so I want that to change.</li>
+    </ul>
+    <!-- REVISION: the paragraph with <br> tags was turned into a list (see the note at the top). "proud of my self" corrected to "proud of myself". -->
 
-<footer>
+    <hr>
+
+    <h2>Questions About Me</h2>
+    <ul>
+      <li><strong>Name:</strong> Constant Morvan</li>
+      <li><strong>Birth month:</strong> I was born in May and I am a Taurus.</li>
+      <li><strong>Favorite subject:</strong> Woodwork.</li>
+      <!-- NOTE FOR TEACHER: "favorite subject is woodwork" also appears in Quick Facts. Consider removing one. -->
+      <li><strong>Favorite video game:</strong> Resident Evil, because the storyline is awesome, I love the characters, and most of all it is a horror game.</li>
+      <li>I used to play the trombone, but I stopped because I did not like it a lot. I did start choir, and I am having a lot of fun.</li>
+      <li><strong>Favorite food:</strong> My mom's smashed potatoes and her lasagna.</li>
+      <li><strong>Superpower:</strong> I would want to be able to control water, because it would be fun.</li>
+      <li><strong>Dream destination:</strong> Australia, because it is simply so beautiful.</li>
+      <li><strong>Favorite season:</strong> Fall, because I love the weather and the holidays.</li>
+      <li><strong>Sleep schedule:</strong> Personally, I think I am more of a night owl.</li>
+      <li><strong>Weekends:</strong> I love to spend my weekend, one day at home and one day outside.</li>
+      <li><strong>Recommendation:</strong> A game I would recommend to everyone is Resident Evil. Like I said before, it is just the best horror game of all time.</li>
+    </ul>
+    <!-- REVISION: this was a paragraph of <br>-separated lines, now a labeled list. Corrected spellings: "favorit", "storie", "awsome", "beatiful", "amd", "woud", "potates", "Personaly", "spent", "every one". "Game" and "Video game" capitalization normalized. The original said "in that world", which was unclear, so it was changed to "dream destination". -->
+
+    <hr>
+
+    <h2>My Joke</h2>
+    <!-- REVISION: the joke code was inside the broken nested HTML blocks, so it has been moved here. -->
+    <button id="joke-btn" type="button">Wanna hear a joke?</button>
+    <p id="joke" hidden>There are two ways to write error-free programs; only the third one works.</p>
+    <!-- REVISION: the joke is hidden with the "hidden" attribute instead of inline style, and it is shown by script.js. -->
+
+  </main>
+
+  <footer>
     <p>&copy; 2026 Constant Morvan</p>
   </footer>
-</html>
+
+  <script src="js/script.js"></script>
+  <!-- REVISION: script.js is loaded at the end of <body>, after the elements it needs. This is the safest place for it. -->
+</body>
 </html>
